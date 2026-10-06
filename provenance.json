@@ -1,0 +1,54 @@
+{
+  "publisher": "HITZ",
+  "publisher_url": "https://hitz.agency",
+  "captured_on": "2026-10-06",
+  "original_urls": {
+    "ru": "https://hitz.agency/tools/geo-audit",
+    "en": "https://hitz.agency/en/tools/geo-audit"
+  },
+  "catalog_url": "https://hitz.agency/tools",
+  "sources": {
+    "page_ru": [
+      {
+        "file": "src/components/tools/geo-audit/Tool.astro",
+        "sha256": "6fa2dd038b15faf62fe213faefec504486d56f44962199e65629352d4578105f"
+      }
+    ],
+    "page_en": [
+      {
+        "file": "src/components/tools/geo-audit/ToolEn.astro",
+        "sha256": "2ee2566744f5b19231bde8e90411cda6845a76148a688f95342b7ff78cc3f8f2"
+      }
+    ],
+    "server": [
+      {
+        "file": "src/server/tools/net.ts",
+        "sha256": "807c5e6f27183914275c7f23359b36d7ead488258ec53f7023ac3567b29e3e7f",
+        "copied_to": "src/core/net.ts"
+      },
+      {
+        "file": "src/server/tools/html.ts",
+        "sha256": "36ea277873120319f07cb6f0ca97616889c2c4e65d972fe13a741cd33380b309",
+        "copied_to": "src/core/html.ts"
+      },
+      {
+        "file": "src/server/tools/geo.ts",
+        "sha256": "82b532ccf8f0a7477e5e3df1f8d242c8662cd197a8f001b3e194698f25ea0e9c",
+        "copied_to": "src/core/geo.ts"
+      },
+      {
+        "file": "src/server/tools/messages.ts",
+        "sha256": "e5a301ca5f92f5c3561b723733e90acf495e37b673a0bb8ebf9b3f8c3aef4ee7",
+        "copied_to": "src/core/messages.ts"
+      }
+    ]
+  },
+  "modifications": [
+    "Extracted the tool sections of the RU and EN pages; site header, footer, lead form, analytics and JSON-LD excluded",
+    "Moved inline styles to public/assets/tool.css and inline scripts to public/assets/js without code changes",
+    "Converted site-relative links to absolute https://hitz.agency URLs",
+    "Added a minimal header and footer with links to the online version and the source code",
+    "Server checks copied from the hitz.agency tools API without logic changes; import paths use .ts extensions; Origin allowlist reduced to same-origin",
+    "Added README, citation, license, tests and Cloudflare Workers configuration"
+  ]
+}

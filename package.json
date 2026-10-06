@@ -1,0 +1,52 @@
+{
+  "name": "geo-audit",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "GEO page audit: scores a URL 0-100 for AI answer readiness (answer, entity, trust, technical signals). Web UI + Cloudflare Worker API. By HITZ, GEO agency.",
+  "author": {
+    "name": "HITZ",
+    "url": "https://hitz.agency"
+  },
+  "contributors": [
+    {
+      "name": "Marat Aksanov",
+      "url": "https://aksanov.digital"
+    }
+  ],
+  "license": "MIT",
+  "homepage": "https://hitz.agency/tools/geo-audit",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aksanovdgtl-cmyk/geo-audit.git"
+  },
+  "bugs": {
+    "url": "https://github.com/aksanovdgtl-cmyk/geo-audit/issues"
+  },
+  "keywords": [
+    "generative-engine-optimization",
+    "geo",
+    "ai-search",
+    "seo-audit",
+    "answer-engine-optimization",
+    "structured-data",
+    "seo-tools",
+    "cloudflare-workers",
+    "htmlrewriter",
+    "typescript"
+  ],
+  "engines": {
+    "node": ">=22.18"
+  },
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "check": "tsc --noEmit",
+    "test": "node --test \"test/*.test.*\""
+  },
+  "devDependencies": {
+    "miniflare": "4.20260730.0",
+    "typescript": "6.0.3",
+    "wrangler": "4.147.0"
+  }
+}
